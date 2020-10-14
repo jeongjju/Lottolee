@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {getUserLottoNumbers} from '../actions/random'
-import { CreateTable } from '../actions/table'
+import { CreateTable } from '../component/table'
 // import Button from '@material-ui/core/Button';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
