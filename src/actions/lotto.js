@@ -1,17 +1,6 @@
 import * as axios from 'axios';
 
 export let lottoAllList = [];
-export function makeLottoList()
-{
-    
-    let i=0;
-    for (let i = 0; i < 200; i++) {
-        const url = 'f' + (i+1);
-        // axios.get(url).then((res)=>{
-        //     lottoAllList.push(res.data);
-        // })
-    }
-}
 
 export function checkCorrectCount(userLottoNumbers,lottoNumbers)
 {
