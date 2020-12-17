@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/lottolee/static/css/main.0131ff6a.chunk.css",
+    "main.js": "/lottolee/static/js/main.207025e1.chunk.js",
+    "main.js.map": "/lottolee/static/js/main.207025e1.chunk.js.map",
+    "runtime-main.js": "/lottolee/static/js/runtime-main.127d0a15.js",
+    "runtime-main.js.map": "/lottolee/static/js/runtime-main.127d0a15.js.map",
+    "static/css/2.75056432.chunk.css": "/lottolee/static/css/2.75056432.chunk.css",
+    "static/js/2.1a2a85ca.chunk.js": "/lottolee/static/js/2.1a2a85ca.chunk.js",
+    "static/js/2.1a2a85ca.chunk.js.map": "/lottolee/static/js/2.1a2a85ca.chunk.js.map",
+    "index.html": "/lottolee/index.html",
+    "precache-manifest.3dc63ac207d0f0a944cb3e35214c20e9.js": "/lottolee/precache-manifest.3dc63ac207d0f0a944cb3e35214c20e9.js",
+    "service-worker.js": "/lottolee/service-worker.js",
+    "static/css/2.75056432.chunk.css.map": "/lottolee/static/css/2.75056432.chunk.css.map",
+    "static/css/main.0131ff6a.chunk.css.map": "/lottolee/static/css/main.0131ff6a.chunk.css.map",
+    "static/js/2.1a2a85ca.chunk.js.LICENSE.txt": "/lottolee/static/js/2.1a2a85ca.chunk.js.LICENSE.txt",
+    "static/media/lotto.png": "/lottolee/static/media/lotto.7975547f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.127d0a15.js",
+    "static/css/2.75056432.chunk.css",
+    "static/js/2.1a2a85ca.chunk.js",
+    "static/css/main.0131ff6a.chunk.css",
+    "static/js/main.207025e1.chunk.js"
+  ]
+}
