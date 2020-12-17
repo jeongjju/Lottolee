@@ -1,0 +1,17 @@
+.allSize {
+    width: flex;
+    background-color: white;
+}
+
+.textPosition {
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.textPosition1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}

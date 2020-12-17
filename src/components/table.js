@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/table.css'
+import '../css/Table.css'
 
 const useSortableData = (items, config = null) => {
   const [sortConfig, setSortConfig] = React.useState(config);
@@ -44,8 +44,9 @@ export const CreateTable = (props) => {
     return sortConfig.key === name ? sortConfig.direction : undefined;
   };
   return (
-    <div>
-      <table >
+    <div className='table'>
+      <h5 className = 'title'>회차별 당첨 결과 </h5>
+      <table>
         <thead >
           <tr>
             <th>
@@ -91,8 +92,8 @@ export const CreateTable = (props) => {
             <tr key={item.id}>
               <td>{item.round} 회차</td>
               <td>{item.number}</td>
-              <td>{item.rank}등</td>
-              <td>₩{item.price}</td>
+              <td>{item.rank} 등</td>
+              <td>{item.price}원</td>
             </tr>
           ))}
         </tbody>

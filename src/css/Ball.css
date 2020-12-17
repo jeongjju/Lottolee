@@ -1,0 +1,25 @@
+.commonBall {
+    width: 512px;
+    align-items: center;
+    /* text-align: center; */
+    margin: 0 auto;
+    margin-top: 4rem;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    margin-bottom: 4rem;
+    background-color: white;
+  }
+
+  .oneBall {
+    position: relative;
+    width: 100%;
+    margin: 12px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+  }
+
+  .ballButton {
+    width: 100%;
+    align-items: center;
+    margin-top: 1rem;
+  }
