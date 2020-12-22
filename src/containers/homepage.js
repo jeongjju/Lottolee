@@ -10,18 +10,50 @@ import {checkCorrectCount,checkCorrectBouns,checkResult,makeLottoList,lottoAllLi
 export default function()
 {
     // makeLottoList();
-    console.log('test');
+    let tmp = 1;
+    let numbers;
     // let userLottoNumbers =  getuserLottoNumbers();
     const [userLottoNumbers,setuserLottoNumbers] = useState(getUserLottoNumbers());
+    const [okClicked, setOkClicked] = useState(false);
+
+    function decryptEffect(element, time) {
+        const effect = setInterval(() => {
+            <span className={getBallColorClassName(element)}>{element}</span>
+            // element.innerText = Math.floor(Math.random() * 44 + 1);
+        }, 10);
     
+        setTimeout(() => {
+            // const random = Math.floor(Math.random() * numbers.length);
+    
+            clearInterval(effect);
+            // element.classList.add("done");
+            // element.innerText = numbers[random];
+            // numbers.splice(random, 1);
+        }, time * 100 + 1000);
+    }
+
+    const lottery =() =>{
+        document.querySelectorAll(".ball").forEach((element, index) => {
+            console.log()
+            // element.classList.remove("done");
+            decryptEffect(element, index);
+        });
+    }
 
     const handleLetClicked = () => {
-        let userLottoNumbers = getUserLottoNumbers();
-        setuserLottoNumbers(userLottoNumbers);
+        if(tmp === 1){
+            numbers = Array.from({length:45},(_,i)=>i+1);
+            tmp = 0;
+            setOkClicked(!okClicked);
+            lottery();
+            console.log('numbers',numbers);
+        }
+        // let userLottoNumbers = getUserLottoNumbers();
+        // setuserLottoNumbers(userLottoNumbers);
         // getAllNumbers();
         // let result = checkCorrectCount([1,2,3,4,5,6],[1,11,3,4,8,9]);
-        let result = checkResult(5,false);
-        console.log(lottoAllList);
+        // let result = checkResult(5,false);
+        // console.log(lottoAllList);
         
     }
     const getBallColorClassName = (number) => {
@@ -41,17 +73,32 @@ export default function()
             return "ball_645 lrg ball5 oneBall"
         }
     }
-    return(
-        <div className="commonBall">
-            <p>
-                <span className={getBallColorClassName(userLottoNumbers[0])}>{userLottoNumbers[0]}</span>
+
+                    {/* <span className={getBallColorClassName(userLottoNumbers[0])}>{userLottoNumbers[0]}</span>
                 <span className={getBallColorClassName(userLottoNumbers[1])}>{userLottoNumbers[1]}</span>
                 <span className={getBallColorClassName(userLottoNumbers[2])}>{userLottoNumbers[2]}</span>
                 <span className={getBallColorClassName(userLottoNumbers[3])}>{userLottoNumbers[3]}</span>
                 <span className={getBallColorClassName(userLottoNumbers[4])}>{userLottoNumbers[4]}</span>
-                <span className={getBallColorClassName(userLottoNumbers[5])}>{userLottoNumbers[5]}</span>
+                <span className={getBallColorClassName(userLottoNumbers[5])}>{userLottoNumbers[5]}</span> */}
+
+    return(
+        <div className="commonBall">
+            <p>
+                {
+                okClicked === false ?
+                userLottoNumbers.map((element,index)=>{
+                    console.log('element',element);
+                    decryptEffect(element,index);
+                })
+                    : 
+                    null
+                }
             </p>
-            <Button className="commonButton" variant="success" onClick={() => { handleLetClicked() }}>GO!</Button>
+            {okClicked === false ? 
+                        <Button className="commonButton" variant="success" onClick={() => { handleLetClicked() }}>GO!</Button>
+            : null
+            }
+
             <div className="textPosition1"> ₩ 누적금액 </div>
             <div className="textPosition">(1~3 등 내)</div>
             <CreateTable 
