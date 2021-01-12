@@ -16,27 +16,28 @@ export default function()
     const [userLottoNumbers,setuserLottoNumbers] = useState(getUserLottoNumbers());
     const [okClicked, setOkClicked] = useState(false);
 
-    function decryptEffect(element, time) {
-        const effect = setInterval(() => {
-            <span className={getBallColorClassName(element)}>{element}</span>
-            // element.innerText = Math.floor(Math.random() * 44 + 1);
-        }, 10);
+    // function decryptEffect(element, time) {
+    //     const effect = setInterval(() => {
+    //         <span className={getBallColorClassName(element)}>{element}</span>
+    //         // element.innerText = Math.floor(Math.random() * 44 + 1);
+    //     }, 10);
     
-        setTimeout(() => {
-            // const random = Math.floor(Math.random() * numbers.length);
+    //     setTimeout(() => {
+    //         // const random = Math.floor(Math.random() * numbers.length);
     
-            clearInterval(effect);
-            // element.classList.add("done");
-            // element.innerText = numbers[random];
-            // numbers.splice(random, 1);
-        }, time * 100 + 1000);
-    }
+    //         clearInterval(effect);
+    //         // element.classList.add("done");
+    //         // element.innerText = numbers[random];
+    //         // numbers.splice(random, 1);
+    //     }, time * 100 + 1000);
+    // }
 
     const lottery =() =>{
+        
         document.querySelectorAll(".ball").forEach((element, index) => {
-            console.log()
+            console.log("element",element,"index",index);
             // element.classList.remove("done");
-            decryptEffect(element, index);
+            // decryptEffect(element, index);
         });
     }
 
@@ -88,7 +89,7 @@ export default function()
                 okClicked === false ?
                 userLottoNumbers.map((element,index)=>{
                     console.log('element',element);
-                    decryptEffect(element,index);
+                    // decryptEffect(element,index);
                 })
                     : 
                     null

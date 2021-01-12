@@ -1,16 +1,9 @@
 const express = require('express');
-const User = require('../schemas/user');
-
 const router = express.Router();
 
-router.get('/', async (req, res, next) => {
-  try {
-    const users = await User.find({});
-    res.render('mongoose', { users });
-  } catch (err) {
-    console.error(err);
-    next(err);
-  }
+router.get('/', (req, res) => {
+    console.log('http://localhost:3002/api/');
+    res.send({title: 'hello react!'});
 });
 
 module.exports = router;
