@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Homepage from './containers/homepage';
 class App extends React.Component{
     componentDidMount() {
-        fetch('http://localhost:3002/api')
+        fetch('/api')
           .then(res => res.json())
           .then(data => console.log('data',data));
       }
