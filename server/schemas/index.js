@@ -5,7 +5,7 @@ const connect = () =>{
          mongoose.set('debug',true);
     }
     // console.log('process.env.DB_USERNAME',process.env.DB_USERNAME);
-    mongoose.connect(`mongodb://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@localhost:27017/admin`,{
+    mongoose.connect(`mongodb+srv://jeongjunoh:${process.env.DB_PASSWORD}@cluster0.6byft.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,{
         dbName:'lotto',
         useNewUrlParser:true,
         useCreateIndex:true,
