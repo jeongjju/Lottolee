@@ -4,7 +4,7 @@ interface LotteryBoxProps {
 }
 
 interface LotteryBoxState {
-    number: FixedLengthArray<number, 7>;
+    number: FixedLengthArray<number, 6>;
     effect: boolean;
 }
 

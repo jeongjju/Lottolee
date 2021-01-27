@@ -22,9 +22,11 @@ function getWinningNumber(lottoInfo)
 {
     if(lottoInfo === undefined)
         return "";
-    return `${lottoInfo['drwtNo1']},${lottoInfo['drwtNo2']},${lottoInfo['drwtNo3']},
-    ${lottoInfo['drwtNo4']},${lottoInfo['drwtNo5']},${lottoInfo['drwtNo6']} + ${lottoInfo['bnusNo']}`
-}
+
+    // return `<TableCell align="center" width="10%">${lottoInfo['drwtNo1']},${lottoInfo['drwtNo2']},${lottoInfo['drwtNo3']},${lottoInfo['drwtNo4']},${lottoInfo['drwtNo5']},${lottoInfo['drwtNo6']} + ${lottoInfo['bnusNo']}</TableCell>`
+    return <TableCell align="center" width="10%">{lottoInfo['drwtNo1']},{lottoInfo['drwtNo2']},{lottoInfo['drwtNo3']},{lottoInfo['drwtNo4']},{lottoInfo['drwtNo5']},{lottoInfo['drwtNo6']} + {lottoInfo['bnusNo']}</TableCell>
+
+  }
 
 function getWinningAmount(rank,lottoInfo)
 {
@@ -91,6 +93,7 @@ export function ResultTable(props) {
         </TableHead>
         <TableBody>
           {rows.map((row,index) => {
+            // console.log('row',row);
             //   console.log('props.amount',props.amount);
             // let winningAmount = getWinningAmount(row.rank,row.lottoInfo);
             // let sum = props.amount + winningAmount;
@@ -99,7 +102,7 @@ export function ResultTable(props) {
             return(
                 <TableRow key={index}>
                 <TableCell  align="center" width="10%">{row.drwNo}</TableCell>
-                  <TableCell align="center" width="30%">{getWinningNumber(row.lottoInfo)}</TableCell>
+                {getWinningNumber(row.lottoInfo)}
                   <TableCell align="center" width="10%">{getWinningAmount(row.rank,row.lottoInfo)}</TableCell>
                   <TableCell align="center" width="10%">{row.rank}</TableCell>
                   <TableCell  align="center" width="20%">{getDate(row.lottoInfo)}</TableCell>

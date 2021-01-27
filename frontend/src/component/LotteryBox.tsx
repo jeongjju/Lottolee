@@ -12,7 +12,7 @@ export default class LotteryBox extends React.Component<
     constructor(props: LotteryBoxProps) {
         super(props);
         this.state = {
-            number: [0, 0, 0, 0, 0, 0, 0],
+            number: [0, 0, 0, 0, 0, 0],
             effect: false,
         };
         // this.onLetClicked = this.
@@ -23,7 +23,7 @@ export default class LotteryBox extends React.Component<
         if (!this.state.effect) {
             const numberCopy = numbers.map((x) => x);
             // const arr = [];
-            for (let i = 0; i <= 7; i++) {
+            for (let i = 0; i < 6; i++) {
                 const random = Math.floor(
                     Math.random() * (numberCopy.length - 1)
                 );
@@ -36,7 +36,7 @@ export default class LotteryBox extends React.Component<
             }, 2000);
         }
         // const numbers = this.state.number;
-        {this.props.onLetClicked([arr[0],arr[1],arr[2],arr[3],arr[4],arr[5],arr[6]])}
+        {this.props.onLetClicked([arr[0],arr[1],arr[2],arr[3],arr[4],arr[5]])}
         // this.props.onLetClicked(this.state.number);
     };
 
@@ -99,13 +99,6 @@ export default class LotteryBox extends React.Component<
                         index="5"
                         color={this.getBallColor(this.state.number[5])}
                         number={this.state.number[5]}
-                        decrypting={this.state.effect}
-                    />
-                    <div className="plus">+</div>
-                    <LotteryItem
-                        index="6"
-                        color={this.getBallColor(this.state.number[6])}
-                        number={this.state.number[6]}
                         decrypting={this.state.effect}
                     />
                 </div>
